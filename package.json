@@ -1,23 +1,24 @@
 {
   "name": "blog-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Blog backend with Express, TypeScript, Prisma",
   "main": "server.mts",
   "type": "module",
   "scripts": {
     "dev": "tsx watch server.mts",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "start": "tsx server.mts"
+  },
+  "engines": {
+    "node": ">=22.0.0"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.20.0",
   "dependencies": {
-    "@prisma/adapter-pg": "^7.3.0",
+    "@prisma/adapter-pg": "^7.4.1",
     "@prisma/client": "^7.3.0",
     "bcrypt": "^6.0.0",
-    "config": "link:@type/prisma/config",
     "cors": "^2.8.6",
     "dotenv": "^17.2.4",
     "express": "^5.2.1",
@@ -33,6 +34,7 @@
     "@types/express": "^5.0.6",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^25.2.3",
+    "@types/pg": "^8.16.0",
     "@types/swagger-jsdoc": "^6.0.4",
     "@types/swagger-ui-express": "^4.1.8",
     "prisma": "^7.3.0",
