@@ -62,7 +62,7 @@ export const loginUser = async (req: Request, res: Response) => {
 export const getUsers = async (req: Request, res: Response) => {
   try {
     const users = await prisma.user.findMany();
-    const safeUsers = users.map(({ password, refresh_token, ...safeUser }) => safeUser);
+    const safeUsers = users.map(({ password: _password, refresh_token: _refreshToken, ...safeUser }: any) => safeUser);
     res.json({count: users.length, users: safeUsers});
   } catch (error) {
     console.error("Error fetching users:", error);
