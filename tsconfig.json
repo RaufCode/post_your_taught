@@ -5,8 +5,14 @@
     "target": "ES2023",
     "strict": true,
     "esModuleInterop": true,
-    "allowImportingTsExtensions": true,
-    "noEmit": true,
-    "skipLibCheck": true
-  }
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "rootDir": ".",
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true
+  },
+  "include": ["**/*.mts", "**/*.ts", "**/*.mjs", "**/*.js"],
+  "exclude": ["node_modules", "dist", "generated"]
 }

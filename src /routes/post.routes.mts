@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { createPost, getPosts, getPostById, updatePost, deletePost } from "../controllers/post.controller.mts";
-import { authenticate } from "../middleware/auth.middleware.mts";
+import { createPost, getPosts, getPostById, updatePost, deletePost } from "../controllers/post.controller.mjs";
+import { authenticate } from "../middleware/auth.middleware.mjs";
 
-const router = Router();
+const router: Router = Router();
 
 /**
  * @swagger

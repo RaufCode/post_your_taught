@@ -6,8 +6,12 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch server.mts",
+    "prebuild": "prisma generate",
     "build": "tsc",
-    "start": "tsx server.mts"
+    "start": "node dist/server.mjs",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate deploy",
+    "prisma:studio": "prisma studio"
   },
   "engines": {
     "node": ">=22.0.0"
@@ -22,6 +26,8 @@
     "cors": "^2.8.6",
     "dotenv": "^17.2.4",
     "express": "^5.2.1",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.1.0",
     "jsonwebtoken": "^9.0.3",
     "pg": "^8.18.0",
     "swagger-jsdoc": "^6.2.8",

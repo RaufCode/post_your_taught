@@ -1,11 +1,8 @@
 import { Request, Response } from "express";
-import { prisma } from "../../lib/prisma.mts";
+import { prisma } from "../../lib/prisma.mjs";
+import { AuthenticatedRequest } from "../middleware/auth.middleware.mjs";
 
-interface AuthRequest extends Request {
-  user?: { id: number; role: string };
-}
-
-export const createPost = async (req: AuthRequest, res: Response) => {
+export const createPost = async (req: AuthenticatedRequest, res: Response) => {
   try {
     const { title, content } = req.body;
     const userId = req.user?.id;
@@ -85,7 +82,7 @@ export const getPostById = async (req: Request, res: Response) => {
   }
 };
 
-export const updatePost = async (req: AuthRequest, res: Response) => {
+export const updatePost = async (req: AuthenticatedRequest, res: Response) => {
   try {
     const id = Number(req.params.id);
     const { title, content } = req.body;
@@ -110,7 +107,7 @@ export const updatePost = async (req: AuthRequest, res: Response) => {
   }
 };
 
-export const deletePost = async (req: AuthRequest, res: Response) => {
+export const deletePost = async (req: AuthenticatedRequest, res: Response) => {
   try {
     const id = Number(req.params.id);
     const userId = req.user?.id;

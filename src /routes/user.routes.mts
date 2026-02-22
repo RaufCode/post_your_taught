@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { loginUser,getUsers, createUser, getUserById, updateUser, deleteUser,refreshToken } from "../controllers/user.controller.mts";
+import { loginUser,getUsers, createUser, getUserById, updateUser, deleteUser,refreshToken } from "../controllers/user.controller.mjs";
 
-const router = Router();
+const router: Router = Router();
 
 /**
  * @swagger

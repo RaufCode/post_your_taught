@@ -1,8 +1,9 @@
 import { Request, Response } from "express";
 import bcrypt from "bcrypt"
 import jwt from "jsonwebtoken";
-import { prisma } from "../../lib/prisma.mts";
-import { createUserSchema, updateUserSchema } from "../validators/user.schema.mts";
+import { prisma } from "../../lib/prisma.mjs";
+import { createUserSchema, updateUserSchema } from "../validators/user.schema.mjs";
+import type { User } from "../../generated/prisma/client";
 
 
 
@@ -62,7 +63,7 @@ export const loginUser = async (req: Request, res: Response) => {
 export const getUsers = async (req: Request, res: Response) => {
   try {
     const users = await prisma.user.findMany();
-    const safeUsers = users.map(({ password: _password, refresh_token: _refreshToken, ...safeUser }: any) => safeUser);
+    const safeUsers = users.map(({ password: _password, refresh_token: _refreshToken, ...safeUser }: User) => safeUser);
     res.json({count: users.length, users: safeUsers});
   } catch (error) {
     console.error("Error fetching users:", error);
