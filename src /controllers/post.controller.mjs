@@ -64,7 +64,8 @@ export const getPostById = async (req, res) => {
                         user_name: true,
                         email: true,
                         role: true,
-                        created_at: true
+                    created_at: true
+                        // authorId: true,
                     }
                 } },
         });
