@@ -1,6 +1,6 @@
-import { verifyAccessToken } from "../utils/jwt.ts";
-import { UnauthorizedError } from "../utils/AppError.ts";
-import { logger } from "../config/logger.ts";
+import { verifyAccessToken } from "../utils/jwt.js";
+import { UnauthorizedError } from "../utils/AppError.js";
+import { logger } from "../config/logger.js";
 export const authenticate = (req, _res, next) => {
     try {
         const authHeader = req.headers.authorization;

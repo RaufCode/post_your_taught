@@ -1,4 +1,4 @@
-import type { UpdateProfileInput, PaginationQuery } from "./schema.ts";
+import type { UpdateProfileInput, PaginationQuery } from "./schema.js";
 export declare class UsersService {
     getProfile(userId: string): Promise<{
         id: string;
@@ -15,7 +15,7 @@ export declare class UsersService {
         profileImage: string | null;
         updatedAt: Date;
     }>;
-    getMyPosts(userId: string, query: PaginationQuery): Promise<import("../../utils/pagination.ts").PaginatedResult<{
+    getMyPosts(userId: string, query: PaginationQuery): Promise<import("../../utils/pagination.js").PaginatedResult<{
         id: string;
         title: string;
         content: string;
@@ -26,7 +26,7 @@ export declare class UsersService {
         createdAt: Date;
         updatedAt: Date;
     }>>;
-    getMyNotifications(userId: string, query: PaginationQuery, unreadOnly?: boolean): Promise<import("../../utils/pagination.ts").PaginatedResult<{
+    getMyNotifications(userId: string, query: PaginationQuery, unreadOnly?: boolean): Promise<import("../../utils/pagination.js").PaginatedResult<{
         id: string;
         type: import("@prisma/client").$Enums.NotificationType;
         isRead: boolean;

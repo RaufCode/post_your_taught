@@ -1,15 +1,15 @@
 import { Router } from "express";
 import type { Router as RouterType } from "express";
-import { postsController } from "./controller.ts";
-import { authenticate } from "../../middleware/auth.ts";
-import { validateBody, validateQuery, validateParams } from "../../middleware/validate.ts";
+import { postsController } from "./controller.js";
+import { authenticate } from "../../middleware/auth.js";
+import { validateBody, validateQuery, validateParams } from "../../middleware/validate.js";
 import {
   createPostSchema,
   updatePostSchema,
   postIdParamSchema,
   paginationQuerySchema,
-} from "./schema.ts";
-import { uploadMultiple } from "../../middleware/upload.ts";
+} from "./schema.js";
+import { uploadMultiple } from "../../middleware/upload.js";
 
 const router: RouterType = Router();
 

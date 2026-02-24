@@ -1,6 +1,6 @@
-import { AppError } from "../utils/AppError.ts";
-import { logger } from "../config/logger.ts";
-import { env } from "../config/env.ts";
+import { AppError } from "../utils/AppError.js";
+import { logger } from "../config/logger.js";
+import { env } from "../config/env.js";
 import { ZodError } from "zod";
 export const errorHandler = (err, req, res, _next) => {
     // Handle Zod validation errors

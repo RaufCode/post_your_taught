@@ -1,9 +1,9 @@
-import type { PaginationQuery } from "./schema.ts";
+import type { PaginationQuery } from "./schema.js";
 export declare class NotificationsService {
     createCommentNotification(actorId: string, recipientId: string, postId: string, commentId: string): Promise<void>;
     createLikeNotification(actorId: string, recipientId: string, postId: string, likeId: string): Promise<void>;
     createViewNotification(actorId: string, recipientId: string, postId: string): Promise<void>;
-    getNotificationsByRecipientId(recipientId: string, query: PaginationQuery): Promise<import("../../utils/pagination.ts").PaginatedResult<{
+    getNotificationsByRecipientId(recipientId: string, query: PaginationQuery): Promise<import("../../utils/pagination.js").PaginatedResult<{
         id: string;
         type: import("@prisma/client").$Enums.NotificationType;
         isRead: boolean;

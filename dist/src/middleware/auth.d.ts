@@ -1,5 +1,5 @@
 import type { Request, Response, NextFunction } from "express";
-import { type TokenPayload } from "../utils/jwt.ts";
+import { type TokenPayload } from "../utils/jwt.js";
 declare global {
     namespace Express {
         interface Request {

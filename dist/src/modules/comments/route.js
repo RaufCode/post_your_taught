@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { commentsController } from "./controller.ts";
-import { authenticate } from "../../middleware/auth.ts";
-import { validateBody, validateQuery, validateParams } from "../../middleware/validate.ts";
-import { createCommentSchema, postIdParamSchema, commentIdParamSchema, paginationQuerySchema, } from "./schema.ts";
+import { commentsController } from "./controller.js";
+import { authenticate } from "../../middleware/auth.js";
+import { validateBody, validateQuery, validateParams } from "../../middleware/validate.js";
+import { createCommentSchema, postIdParamSchema, commentIdParamSchema, paginationQuerySchema, } from "./schema.js";
 const router = Router();
 /**
  * @swagger

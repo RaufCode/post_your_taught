@@ -1,9 +1,9 @@
-import { NotFoundError, ForbiddenError } from "../../utils/AppError.ts";
-import { postsRepository } from "./repository.ts";
-import { uploadToCloudinary, deleteFromCloudinary } from "../../utils/cloudinary.ts";
-import { getPaginationParams, createPaginatedResponse } from "../../utils/pagination.ts";
-import { logger } from "../../config/logger.ts";
-import { notificationsService } from "../notifications/service.ts";
+import { NotFoundError, ForbiddenError } from "../../utils/AppError.js";
+import { postsRepository } from "./repository.js";
+import { uploadToCloudinary, deleteFromCloudinary } from "../../utils/cloudinary.js";
+import { getPaginationParams, createPaginatedResponse } from "../../utils/pagination.js";
+import { logger } from "../../config/logger.js";
+import { notificationsService } from "../notifications/service.js";
 export class PostsService {
     async createPost(authorId, data, images) {
         // Upload images to Cloudinary if provided

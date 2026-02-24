@@ -1,4 +1,4 @@
-import type { CreateCommentInput, PaginationQuery } from "./schema.ts";
+import type { CreateCommentInput, PaginationQuery } from "./schema.js";
 export declare class CommentsService {
     createComment(authorId: string, postId: string, data: CreateCommentInput): Promise<{
         id: string;
@@ -10,7 +10,7 @@ export declare class CommentsService {
         };
         createdAt: Date;
     }>;
-    getCommentsByPostId(postId: string, query: PaginationQuery): Promise<import("../../utils/pagination.ts").PaginatedResult<{
+    getCommentsByPostId(postId: string, query: PaginationQuery): Promise<import("../../utils/pagination.js").PaginatedResult<{
         id: string;
         content: string;
         author: {

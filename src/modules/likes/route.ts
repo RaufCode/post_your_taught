@@ -1,9 +1,9 @@
 import { Router } from "express";
 import type { Router as RouterType } from "express";
-import { likesController } from "./controller.ts";
-import { authenticate } from "../../middleware/auth.ts";
-import { validateParams } from "../../middleware/validate.ts";
-import { postIdParamSchema } from "./schema.ts";
+import { likesController } from "./controller.js";
+import { authenticate } from "../../middleware/auth.js";
+import { validateParams } from "../../middleware/validate.js";
+import { postIdParamSchema } from "./schema.js";
 
 const router: RouterType = Router();
 

@@ -1,5 +1,5 @@
-import { asyncHandler } from "../../utils/asyncHandler.ts";
-import { commentsService } from "./service.ts";
+import { asyncHandler } from "../../utils/asyncHandler.js";
+import { commentsService } from "./service.js";
 export class CommentsController {
     createComment = asyncHandler(async (req, res) => {
         const userId = req.user.userId;

@@ -1,4 +1,4 @@
-import { prisma } from "../../config/database.ts";
+import { prisma } from "../../config/database.js";
 export class NotificationsRepository {
     async getNotificationsByRecipientId(recipientId, skip, take) {
         const [notifications, total] = await Promise.all([

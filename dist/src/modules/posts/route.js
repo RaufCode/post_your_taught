@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { postsController } from "./controller.ts";
-import { authenticate } from "../../middleware/auth.ts";
-import { validateBody, validateQuery, validateParams } from "../../middleware/validate.ts";
-import { createPostSchema, updatePostSchema, postIdParamSchema, paginationQuerySchema, } from "./schema.ts";
-import { uploadMultiple } from "../../middleware/upload.ts";
+import { postsController } from "./controller.js";
+import { authenticate } from "../../middleware/auth.js";
+import { validateBody, validateQuery, validateParams } from "../../middleware/validate.js";
+import { createPostSchema, updatePostSchema, postIdParamSchema, paginationQuerySchema, } from "./schema.js";
+import { uploadMultiple } from "../../middleware/upload.js";
 const router = Router();
 /**
  * @swagger

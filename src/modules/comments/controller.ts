@@ -1,7 +1,7 @@
 import type { Request, Response, RequestHandler } from "express";
-import { asyncHandler } from "../../utils/asyncHandler.ts";
-import { commentsService } from "./service.ts";
-import type { CreateCommentInput, PaginationQuery, PostIdParam, CommentIdParam } from "./schema.ts";
+import { asyncHandler } from "../../utils/asyncHandler.js";
+import { commentsService } from "./service.js";
+import type { CreateCommentInput, PaginationQuery, PostIdParam, CommentIdParam } from "./schema.js";
 
 export class CommentsController {
   createComment: RequestHandler = asyncHandler(async (req: Request, res: Response) => {

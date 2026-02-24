@@ -1,7 +1,7 @@
-import { prisma } from "../../config/database.ts";
+import { prisma } from "../../config/database.js";
 import type { User, RefreshToken } from "@prisma/client";
 import bcrypt from "bcryptjs";
-import { env } from "../../config/env.ts";
+import { env } from "../../config/env.js";
 
 export class AuthRepository {
   async findUserByEmail(email: string): Promise<User | null> {

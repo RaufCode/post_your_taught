@@ -4,17 +4,17 @@ import helmet from "helmet";
 import morgan from "morgan";
 import cookieParser from "cookie-parser";
 import swaggerUi from "swagger-ui-express";
-import { env } from "./src/config/env.ts";
-import { errorHandler } from "./src/middleware/errorHandler.ts";
-import { apiLimiter } from "./src/middleware/rateLimit.ts";
-import { swaggerSpec } from "./src/config/swagger.ts";
+import { env } from "./src/config/env.js";
+import { errorHandler } from "./src/middleware/errorHandler.js";
+import { apiLimiter } from "./src/middleware/rateLimit.js";
+import { swaggerSpec } from "./src/config/swagger.js";
 // Import routes
-import authRoutes from "./src/modules/auth/route.ts";
-import usersRoutes from "./src/modules/users/route.ts";
-import postsRoutes from "./src/modules/posts/route.ts";
-import commentsRoutes from "./src/modules/comments/route.ts";
-import likesRoutes from "./src/modules/likes/route.ts";
-import notificationsRoutes from "./src/modules/notifications/route.ts";
+import authRoutes from "./src/modules/auth/route.js";
+import usersRoutes from "./src/modules/users/route.js";
+import postsRoutes from "./src/modules/posts/route.js";
+import commentsRoutes from "./src/modules/comments/route.js";
+import likesRoutes from "./src/modules/likes/route.js";
+import notificationsRoutes from "./src/modules/notifications/route.js";
 const app = express();
 // Security middleware
 app.use(helmet());

@@ -1,7 +1,7 @@
 import type { Request, Response, RequestHandler } from "express";
-import { asyncHandler } from "../../utils/asyncHandler.ts";
-import { notificationsService } from "./service.ts";
-import type { PaginationQuery, NotificationIdParam } from "./schema.ts";
+import { asyncHandler } from "../../utils/asyncHandler.js";
+import { notificationsService } from "./service.js";
+import type { PaginationQuery, NotificationIdParam } from "./schema.js";
 
 export class NotificationsController {
   getMyNotifications: RequestHandler = asyncHandler(async (req: Request, res: Response) => {

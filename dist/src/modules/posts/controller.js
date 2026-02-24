@@ -1,5 +1,5 @@
-import { asyncHandler } from "../../utils/asyncHandler.ts";
-import { postsService } from "./service.ts";
+import { asyncHandler } from "../../utils/asyncHandler.js";
+import { postsService } from "./service.js";
 export class PostsController {
     createPost = asyncHandler(async (req, res) => {
         const userId = req.user.userId;

@@ -1,4 +1,4 @@
-import { prisma } from "../../config/database.ts";
+import { prisma } from "../../config/database.js";
 import type { Like } from "@prisma/client";
 
 export class LikesRepository {

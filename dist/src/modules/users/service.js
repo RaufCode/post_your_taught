@@ -1,8 +1,8 @@
-import { ConflictError, NotFoundError } from "../../utils/AppError.ts";
-import { usersRepository } from "./repository.ts";
-import { uploadToCloudinary, deleteFromCloudinary } from "../../utils/cloudinary.ts";
-import { getPaginationParams, createPaginatedResponse } from "../../utils/pagination.ts";
-import { logger } from "../../config/logger.ts";
+import { ConflictError, NotFoundError } from "../../utils/AppError.js";
+import { usersRepository } from "./repository.js";
+import { uploadToCloudinary, deleteFromCloudinary } from "../../utils/cloudinary.js";
+import { getPaginationParams, createPaginatedResponse } from "../../utils/pagination.js";
+import { logger } from "../../config/logger.js";
 export class UsersService {
     async getProfile(userId) {
         const user = await usersRepository.findUserById(userId);

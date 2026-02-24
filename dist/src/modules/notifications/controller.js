@@ -1,5 +1,5 @@
-import { asyncHandler } from "../../utils/asyncHandler.ts";
-import { notificationsService } from "./service.ts";
+import { asyncHandler } from "../../utils/asyncHandler.js";
+import { notificationsService } from "./service.js";
 export class NotificationsController {
     getMyNotifications = asyncHandler(async (req, res) => {
         const userId = req.user.userId;

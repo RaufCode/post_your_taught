@@ -1,8 +1,8 @@
-import { NotFoundError } from "../../utils/AppError.ts";
-import { likesRepository } from "./repository.ts";
-import { postsRepository } from "../posts/repository.ts";
-import { logger } from "../../config/logger.ts";
-import { notificationsService } from "../notifications/service.ts";
+import { NotFoundError } from "../../utils/AppError.js";
+import { likesRepository } from "./repository.js";
+import { postsRepository } from "../posts/repository.js";
+import { logger } from "../../config/logger.js";
+import { notificationsService } from "../notifications/service.js";
 
 export class LikesService {
   async toggleLike(userId: string, postId: string) {

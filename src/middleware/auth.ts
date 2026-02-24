@@ -1,7 +1,7 @@
 import type { Request, Response, NextFunction } from "express";
-import { verifyAccessToken, type TokenPayload } from "../utils/jwt.ts";
-import { UnauthorizedError } from "../utils/AppError.ts";
-import { logger } from "../config/logger.ts";
+import { verifyAccessToken, type TokenPayload } from "../utils/jwt.js";
+import { UnauthorizedError } from "../utils/AppError.js";
+import { logger } from "../config/logger.js";
 
 // Extend Express Request type to include user
 declare global {

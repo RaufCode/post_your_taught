@@ -1,7 +1,7 @@
 import type { Request, Response, RequestHandler } from "express";
-import { asyncHandler } from "../../utils/asyncHandler.ts";
-import { likesService } from "./service.ts";
-import type { PostIdParam } from "./schema.ts";
+import { asyncHandler } from "../../utils/asyncHandler.js";
+import { likesService } from "./service.js";
+import type { PostIdParam } from "./schema.js";
 
 export class LikesController {
   toggleLike: RequestHandler = asyncHandler(async (req: Request, res: Response) => {

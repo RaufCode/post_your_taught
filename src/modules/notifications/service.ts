@@ -1,9 +1,9 @@
-import { prisma } from "../../config/database.ts";
-import { notificationsRepository } from "./repository.ts";
-import { getPaginationParams, createPaginatedResponse } from "../../utils/pagination.ts";
-import { NotFoundError, ForbiddenError } from "../../utils/AppError.ts";
-import { logger } from "../../config/logger.ts";
-import type { PaginationQuery } from "./schema.ts";
+import { prisma } from "../../config/database.js";
+import { notificationsRepository } from "./repository.js";
+import { getPaginationParams, createPaginatedResponse } from "../../utils/pagination.js";
+import { NotFoundError, ForbiddenError } from "../../utils/AppError.js";
+import { logger } from "../../config/logger.js";
+import type { PaginationQuery } from "./schema.js";
 
 export class NotificationsService {
   // Notification creation methods (called by other services)

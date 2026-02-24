@@ -1,5 +1,5 @@
-import { asyncHandler } from "../../utils/asyncHandler.ts";
-import { likesService } from "./service.ts";
+import { asyncHandler } from "../../utils/asyncHandler.js";
+import { likesService } from "./service.js";
 export class LikesController {
     toggleLike = asyncHandler(async (req, res) => {
         const userId = req.user.userId;

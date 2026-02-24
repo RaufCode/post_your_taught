@@ -1,5 +1,5 @@
-import { asyncHandler } from "../../utils/asyncHandler.ts";
-import { usersService } from "./service.ts";
+import { asyncHandler } from "../../utils/asyncHandler.js";
+import { usersService } from "./service.js";
 export class UsersController {
     getMe = asyncHandler(async (req, res) => {
         const userId = req.user.userId;

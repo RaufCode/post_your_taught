@@ -1,4 +1,4 @@
-import type { RegisterInput, LoginInput, RefreshTokenInput } from "./schema.ts";
+import type { RegisterInput, LoginInput, RefreshTokenInput } from "./schema.js";
 export declare class AuthService {
     register(data: RegisterInput): Promise<{
         accessToken: string;

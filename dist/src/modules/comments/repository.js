@@ -1,4 +1,4 @@
-import { prisma } from "../../config/database.ts";
+import { prisma } from "../../config/database.js";
 export class CommentsRepository {
     async createComment(data) {
         return prisma.comment.create({

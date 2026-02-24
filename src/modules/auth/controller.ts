@@ -1,12 +1,12 @@
 import type { Request, Response, RequestHandler } from "express";
-import { asyncHandler } from "../../utils/asyncHandler.ts";
-import { authService } from "./service.ts";
+import { asyncHandler } from "../../utils/asyncHandler.js";
+import { authService } from "./service.js";
 import type {
   RegisterInput,
   LoginInput,
   RefreshTokenInput,
-} from "./schema.ts";
-import { env } from "../../config/env.ts";
+} from "./schema.js";
+import { env } from "../../config/env.js";
 
 export class AuthController {
   register: RequestHandler = asyncHandler(async (req: Request, res: Response) => {

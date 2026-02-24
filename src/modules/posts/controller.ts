@@ -1,7 +1,7 @@
 import type { Request, Response, RequestHandler } from "express";
-import { asyncHandler } from "../../utils/asyncHandler.ts";
-import { postsService } from "./service.ts";
-import type { CreatePostInput, UpdatePostInput, PaginationQuery, PostIdParam } from "./schema.ts";
+import { asyncHandler } from "../../utils/asyncHandler.js";
+import { postsService } from "./service.js";
+import type { CreatePostInput, UpdatePostInput, PaginationQuery, PostIdParam } from "./schema.js";
 
 export class PostsController {
   createPost: RequestHandler = asyncHandler(async (req: Request, res: Response) => {

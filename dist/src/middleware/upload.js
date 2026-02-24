@@ -1,7 +1,7 @@
 import multer from "multer";
 import path from "path";
 import crypto from "crypto";
-import { BadRequestError } from "../utils/AppError.ts";
+import { BadRequestError } from "../utils/AppError.js";
 // Configure storage
 const storage = multer.diskStorage({
     destination: (_req, _file, cb) => {

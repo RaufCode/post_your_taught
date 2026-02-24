@@ -1,12 +1,12 @@
 import { Router } from "express";
 import type { Router as RouterType } from "express";
-import { notificationsController } from "./controller.ts";
-import { authenticate } from "../../middleware/auth.ts";
-import { validateParams, validateQuery } from "../../middleware/validate.ts";
+import { notificationsController } from "./controller.js";
+import { authenticate } from "../../middleware/auth.js";
+import { validateParams, validateQuery } from "../../middleware/validate.js";
 import {
   notificationIdParamSchema,
   paginationQuerySchema,
-} from "./schema.ts";
+} from "./schema.js";
 
 const router: RouterType = Router();
 

@@ -1,6 +1,6 @@
-import { prisma } from "../../config/database.ts";
+import { prisma } from "../../config/database.js";
 import bcrypt from "bcryptjs";
-import { env } from "../../config/env.ts";
+import { env } from "../../config/env.js";
 export class AuthRepository {
     async findUserByEmail(email) {
         return prisma.user.findUnique({

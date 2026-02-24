@@ -1,9 +1,9 @@
 import { Router } from "express";
 import type { Router as RouterType } from "express";
-import { authController } from "./controller.ts";
-import { validateBody } from "../../middleware/validate.ts";
-import { registerSchema, loginSchema, refreshTokenSchema } from "./schema.ts";
-import { authLimiter } from "../../middleware/rateLimit.ts";
+import { authController } from "./controller.js";
+import { validateBody } from "../../middleware/validate.js";
+import { registerSchema, loginSchema, refreshTokenSchema } from "./schema.js";
+import { authLimiter } from "../../middleware/rateLimit.js";
 
 const router: RouterType = Router();
 

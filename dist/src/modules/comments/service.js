@@ -1,9 +1,9 @@
-import { NotFoundError, ForbiddenError } from "../../utils/AppError.ts";
-import { commentsRepository } from "./repository.ts";
-import { postsRepository } from "../posts/repository.ts";
-import { getPaginationParams, createPaginatedResponse } from "../../utils/pagination.ts";
-import { logger } from "../../config/logger.ts";
-import { notificationsService } from "../notifications/service.ts";
+import { NotFoundError, ForbiddenError } from "../../utils/AppError.js";
+import { commentsRepository } from "./repository.js";
+import { postsRepository } from "../posts/repository.js";
+import { getPaginationParams, createPaginatedResponse } from "../../utils/pagination.js";
+import { logger } from "../../config/logger.js";
+import { notificationsService } from "../notifications/service.js";
 export class CommentsService {
     async createComment(authorId, postId, data) {
         // Check if post exists

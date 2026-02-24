@@ -1,6 +1,6 @@
 import rateLimit from "express-rate-limit";
-import { env } from "../config/env.ts";
-import { TooManyRequestsError } from "../utils/AppError.ts";
+import { env } from "../config/env.js";
+import { TooManyRequestsError } from "../utils/AppError.js";
 
 // General API rate limiter
 export const apiLimiter = rateLimit({

@@ -1,10 +1,10 @@
 import { Router } from "express";
 import type { Router as RouterType } from "express";
-import { usersController } from "./controller.ts";
-import { authenticate } from "../../middleware/auth.ts";
-import { validateBody, validateQuery } from "../../middleware/validate.ts";
-import { updateProfileSchema, paginationQuerySchema } from "./schema.ts";
-import { uploadProfile } from "../../middleware/upload.ts";
+import { usersController } from "./controller.js";
+import { authenticate } from "../../middleware/auth.js";
+import { validateBody, validateQuery } from "../../middleware/validate.js";
+import { updateProfileSchema, paginationQuerySchema } from "./schema.js";
+import { uploadProfile } from "../../middleware/upload.js";
 
 const router: RouterType = Router();
 

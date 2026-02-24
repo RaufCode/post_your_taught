@@ -1,5 +1,5 @@
 import { ZodError } from "zod";
-import { BadRequestError } from "../utils/AppError.ts";
+import { BadRequestError } from "../utils/AppError.js";
 export const validateBody = (schema) => {
     return (req, _res, next) => {
         try {

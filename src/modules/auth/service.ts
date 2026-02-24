@@ -2,20 +2,20 @@ import {
   ConflictError,
   UnauthorizedError,
   NotFoundError,
-} from "../../utils/AppError.ts";
+} from "../../utils/AppError.js";
 import {
   generateAccessToken,
   generateRefreshToken,
   verifyRefreshToken,
-} from "../../utils/jwt.ts";
-import { authRepository } from "./repository.ts";
+} from "../../utils/jwt.js";
+import { authRepository } from "./repository.js";
 import type {
   RegisterInput,
   LoginInput,
   RefreshTokenInput,
-} from "./schema.ts";
-import { logger } from "../../config/logger.ts";
-import { env } from "../../config/env.ts";
+} from "./schema.js";
+import { logger } from "../../config/logger.js";
+import { env } from "../../config/env.js";
 
 export class AuthService {
   async register(data: RegisterInput) {

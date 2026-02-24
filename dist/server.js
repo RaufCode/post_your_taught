@@ -1,8 +1,8 @@
 import dotenv from "dotenv";
-import app from "./app.ts";
-import { env } from "./src/config/env.ts";
-import { prisma } from "./src/config/database.ts";
-import { logger } from "./src/config/logger.ts";
+import app from "./app.js";
+import { env } from "./src/config/env.js";
+import { prisma } from "./src/config/database.js";
+import { logger } from "./src/config/logger.js";
 dotenv.config();
 const PORT = env.PORT || 3000;
 // Graceful shutdown handling

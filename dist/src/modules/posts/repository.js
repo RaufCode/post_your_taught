@@ -1,4 +1,4 @@
-import { prisma } from "../../config/database.ts";
+import { prisma } from "../../config/database.js";
 export class PostsRepository {
     async createPost(data) {
         return prisma.post.create({

@@ -1,6 +1,6 @@
-import { prisma } from "../src/config/database.ts";
+import { prisma } from "../src/config/database.js";
 import bcrypt from "bcryptjs";
-import { env } from "../src/config/env.ts";
+import { env } from "../src/config/env.js";
 async function main() {
     console.log("🌱 Starting database seed...");
     // Clean existing data

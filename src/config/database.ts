@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
 import pg from "pg";
-import { env } from "./env.ts";
+import { env } from "./env.js";
 
 declare global {
   // eslint-disable-next-line no-var

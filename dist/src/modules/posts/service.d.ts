@@ -1,4 +1,4 @@
-import type { CreatePostInput, UpdatePostInput, PaginationQuery } from "./schema.ts";
+import type { CreatePostInput, UpdatePostInput, PaginationQuery } from "./schema.js";
 export declare class PostsService {
     createPost(authorId: string, data: CreatePostInput, images?: Express.Multer.File[]): Promise<{
         id: string;
@@ -9,7 +9,7 @@ export declare class PostsService {
         createdAt: Date;
         updatedAt: Date;
     }>;
-    getAllPosts(query: PaginationQuery): Promise<import("../../utils/pagination.ts").PaginatedResult<{
+    getAllPosts(query: PaginationQuery): Promise<import("../../utils/pagination.js").PaginatedResult<{
         id: string;
         title: string;
         content: string;

@@ -1,6 +1,6 @@
-import { asyncHandler } from "../../utils/asyncHandler.ts";
-import { authService } from "./service.ts";
-import { env } from "../../config/env.ts";
+import { asyncHandler } from "../../utils/asyncHandler.js";
+import { authService } from "./service.js";
+import { env } from "../../config/env.js";
 export class AuthController {
     register = asyncHandler(async (req, res) => {
         const data = req.body;

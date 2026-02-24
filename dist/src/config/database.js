@@ -1,7 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
 import pg from "pg";
-import { env } from "./env.ts";
+import { env } from "./env.js";
 // Create PostgreSQL connection pool
 const pool = new pg.Pool({
     connectionString: env.DATABASE_URL,

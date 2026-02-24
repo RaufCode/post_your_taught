@@ -1,6 +1,6 @@
 import { v2 as cloudinary } from "cloudinary";
-import { env } from "../config/env.ts";
-import { logger } from "../config/logger.ts";
+import { env } from "../config/env.js";
+import { logger } from "../config/logger.js";
 // Configure Cloudinary if credentials are available
 if (env.CLOUDINARY_CLOUD_NAME && env.CLOUDINARY_API_KEY && env.CLOUDINARY_API_SECRET) {
     cloudinary.config({

@@ -1,7 +1,7 @@
 import type { Request, Response, RequestHandler } from "express";
-import { asyncHandler } from "../../utils/asyncHandler.ts";
-import { usersService } from "./service.ts";
-import type { UpdateProfileInput, PaginationQuery } from "./schema.ts";
+import { asyncHandler } from "../../utils/asyncHandler.js";
+import { usersService } from "./service.js";
+import type { UpdateProfileInput, PaginationQuery } from "./schema.js";
 
 export class UsersController {
   getMe: RequestHandler = asyncHandler(async (req: Request, res: Response) => {
