@@ -93,6 +93,30 @@ export const errorHandler: ErrorRequestHandler = (err, req, res, _next) => {
       return;
     }
 
+    // Table does not exist / schema drift
+    if (err.code === "P2021") {
+      res.status(500).json({
+        success: false,
+        error: {
+          code: "SCHEMA_MISMATCH",
+          message: "Database schema is not synced with the application",
+        },
+      });
+      return;
+    }
+
+    // Column does not exist / schema drift
+    if (err.code === "P2022") {
+      res.status(500).json({
+        success: false,
+        error: {
+          code: "SCHEMA_MISMATCH",
+          message: "Database schema is not synced with the application",
+        },
+      });
+      return;
+    }
+
     res.status(500).json({
       success: false,
       error: {
